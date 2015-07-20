@@ -15,7 +15,7 @@ use Codeception\Event\SuiteEvent;
 use Codeception\Event\TestEvent;
 use Codeception\Event\StepEvent;
 
-class Testatistics extends \Codeception\Platform\Extension
+class Teststatistics extends \Codeception\Platform\Extension
 {
 	/**
 	 * Maximum time in second allowed for a step to be performant
