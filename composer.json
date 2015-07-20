@@ -18,10 +18,9 @@
   "require-dev": {
     "codeception/codeception": "@dev"
   },
-  "autoload":{
-    "psr-0":{
-      "Codeception":"src"
-
+  "autoload": {
+    "psr-4": {
+      "Codeception\\Extension\\": "src"
     }
   }
 }
