@@ -1,0 +1,27 @@
+{
+  "name":"redcomponent/teststatistics",
+  "description":"Codeception Extension to measure the performance of your tests",
+  "keywords":["performance", "acceptance testing", "functional testing", "unit testing", "tdd"],
+  "homepage":"https://github.com/redCOMPONENT-COM/teststatistics",
+
+  "type":"library",
+  "license":"GPL2",
+  "authors":[
+    {
+      "name":"Javier Gómez",
+      "email":"javier@redcomponent.com",
+      "homepage":"https://github.com/redCOMPONENT-COM/teststatistics"
+    }
+  ],
+  "require": {
+  },
+  "require-dev": {
+    "codeception/codeception": "@dev"
+  },
+  "autoload":{
+    "psr-0":{
+      "Codeception":"src"
+
+    }
+  }
+}
