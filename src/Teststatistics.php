@@ -8,7 +8,6 @@
  */
 
 namespace Codeception\Extension;
-require_once __DIR__.'/../../../vendor/autoload.php';
 
 use Codeception\Events;
 use Codeception\Event\SuiteEvent;
