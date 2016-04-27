@@ -47,10 +47,7 @@ class Teststatistics extends \Codeception\Platform\Extension
 	// we are printing test status and time taken
 	public function beforeTest(TestEvent $e)
 	{
-		$testName = $e->getTest()->toString();
-		preg_match('#\((.*?)\)#', $testName, $fileName);
-
-		self::$tmpCurrentTest = $fileName[1];
+		self::$tmpCurrentTest = \Codeception\Test\Descriptor::getTestFileName($e->getTest());
 	}
 
 	// we are printing test status and time taken
@@ -83,9 +80,7 @@ class Teststatistics extends \Codeception\Platform\Extension
 	public function afterTest(TestEvent $e)
 	{
 		$test = new \stdClass;
-		$testName = $e->getTest()->toString();
-		preg_match('#\((.*?)\)#', $testName, $fileName);
-		$test->name = $fileName[1];
+		$test->name = \Codeception\Test\Descriptor::getTestFileName($e->getTest());
 
 
 		// stack overflow: http://stackoverflow.com/questions/16825240/how-to-convert-microtime-to-hhmmssuu
