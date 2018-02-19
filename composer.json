@@ -5,7 +5,7 @@
   "homepage":"https://github.com/redCOMPONENT-COM/teststatistics",
 
   "type":"library",
-  "license":"GPL2",
+  "license":"GPL-2.0+",
   "authors":[
     {
       "name":"Javier Gómez",
