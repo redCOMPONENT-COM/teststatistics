@@ -39,10 +39,18 @@ class Teststatistics extends \Codeception\Platform\Extension
 	static $events = array(
 		Events::TEST_BEFORE  => 'beforeTest',
 		Events::TEST_END     => 'afterTest',
+		Events::SUITE_BEFORE => 'beforeSuite',
 		Events::SUITE_AFTER  => 'afterSuite',
 		Events::STEP_BEFORE  => 'beforeStep',
 		Events::STEP_AFTER   => 'afterStep'
 	);
+
+	// reset times and not performant tests arrays, in case multiple suites are launched
+	public function beforeSuite(SuiteEvent $e)
+	{
+		self::$testTimes = array();
+		self::$notPerformantStepsByTest = array();
+	}
 
 	// we are printing test status and time taken
 	public function beforeTest(TestEvent $e)
